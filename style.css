@@ -1,0 +1,59 @@
+body {
+    font-family: 'Text Me One', sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+
+#login {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  font-size: 40px;
+}
+
+#currentcolor {
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  font-size: 20px;
+}
+
+#color-picker {
+  position: fixed;
+  left: 40%;
+  top: 25%;
+}
+
+#favorites {
+  position: fixed;
+  left: 75%;
+  top: 25%;
+  font-size: 20px;
+}
+
+#newcolor {
+  position: fixed;
+  left: 62%;
+  top: 25%;
+  font-size: 20px;
+}
+
+#buttons {
+  position: fixed;
+  top: 60%;
+  width: 100%;
+  font-size: 12px;
+}
+
+#toAdvanced, #backbutton {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+}
+
+#advancedbuttons {
+  position: fixed;
+  top: 35%;
+  width: 100%;
+  font-size: 14px;
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+        <title>Lightbulb!!</title>
+				<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+				<script>
+				  // Initialize Firebase
+				  var config = {
+				    apiKey: "AIzaSyBeScXnnjSXX8md0bGRyR1BwMJwa0Z1ve0",
+				    authDomain: "rgb-led-f92c6.firebaseapp.com",
+				    databaseURL: "https://rgb-led-f92c6.firebaseio.com",
+				    projectId: "rgb-led-f92c6",
+				    storageBucket: "rgb-led-f92c6.appspot.com",
+				    messagingSenderId: "839264461668"
+				  };
+				  firebase.initializeApp(config);
+					var database = firebase.database();
+				</script>
+				<!-- Firebase App is always required and must be first -->
+				<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+
+				<!-- Add additional services that you want to use -->
+				<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-database.js"></script>
+
+				<!-- Comment out (or don't include) services that you don't want to use -->
+				<!-- <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script> -->
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
+				<!--Color picker from here: https://github.com/DavidDurman/FlexiColorPicker-->
+				<script src="./resources/colorpicker/colorpicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="./resources/colorpicker/themes.css" />
+    </head>
+    <body>
+        <br>IT'S LIT
+		<!--login and create account page-->
+		<div id="login">
+			Username: <input type="text" id="username"/><br>
+			Password: <input type="password" id="password"/><br>
+			<input type="submit" id="loginbutton" value="Log In"/>
+			<input type="submit" id="registerbutton" value="Register"/>
+		</div>
+		<!--home page with everything-->
+		<div id="home">
+			<div id="colorpicker"></div>
+			<div style="width:150px;height:150px;border:1px solid #000;" id="currentcolor"><br> Current Color </div>
+			<div id="color-picker" class="cp-default"></div>
+				<div style="width:150px;height:150px;border:1px solid #000;" id="newcolor"><br> New Color </div>
+				<div id="favorites">
+					<div style="width:150px;height:150px;border:1px solid #000;" id="favecolor"><br> Your Favorite Color </div>
+					<br> <input type="submit" id="applyfave" value="Apply Color"/>
+				</div>
+				<div id="buttons">
+				<input type="Submit" id="changeLight" value="Change Light"/>
+				<input type="Submit" id="fadeLight" value="Fade Light"/>
+				<input type="Submit" id="turnOff" value="Turn Off Light"/>
+				<input type="Submit" id="fadeOff" value="Fade Off Light"/><br><br>
+				Timer (in seconds):<input type="number" id="timer"/>
+				<input type="Submit" id="timerChange" value="Set Timer"/>
+				<!--<input type="Submit" id="timerFade" value="Set Timer Fade"/>--><br><br>
+				<input type="Submit" id="blinkon" value="Turn On Blinking"/>
+				<input type="Submit" id="blinkoff" value="Turn Off Blinking"/>
+				Blink Speed: <input type="range" min=0 max=2 id="blinkspeed"/><br><br>
+				<input type="Submit" id="fave" value="Make this Color Favorite"/>
+				<input type="Submit" id="toAdvanced" value="Advanced Settings"/>
+			</div>
+			</div>
+			<!--advanced settings!-->
+			<div id="advancedsettings">
+				<input type="Submit" id="backbutton" value="Back"/>
+				<div id="advancedbuttons">
+				Set default timer time:
+				<input type="number" id="defaulttimer"/><input type="Submit" id="changedefaulttimer" value="Go!"/>
+				<br><br><br><br>
+				<input type="submit" id="logout" value="Log Out"/><br>
+				<br>
+				Delete Account: <br> Verify Password:
+				<input type="password" id="verifypassword"/>
+				<input type="submit" id="deleteaccount" value="Delete Account"/>
+				<br><br>
+				Change Password: <br> Old password:
+				<input type="password" id="oldpassword"/><br>
+				New password:
+				<input type="password" id="newpassword"/>
+				<input type="submit" id="changepassword" value="Change Password"/>
+			</div>
+			</div>
+
+
+		<script src="./resources/particle/particle.min.js"></script>
+		<script src="index.js"></script>
+		<script src="led.js"></script>
+		<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  	<!-- Load our React component. -->
+  	<!--<script src="colorpicker.js"></script>-->
+
+    </body>
+</html>
